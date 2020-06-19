@@ -1,0 +1,31 @@
+.{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body{
+  height: 92.5vh;
+  background-color: white;
+  background: linear-gradient(to bottom,skyblue,white);
+  overflow: hidden;
+  /* background: linear-gradient(to bottom,pink,red); */
+  /* background: linear-gradient(to top, #141E30 0%,#243B55 100%); */
+}
+.container{
+  margin-top: 200px;
+  margin-left: 80px;
+}
+.card{
+  color: white;
+  background: linear-gradient(to top, #141E30 0%,#243B55 100%);
+}
+.navbar{
+  /* background: linear-gradient(to bottom,skyblue,white); */
+  /* background: linear-gradient(to bottom, #ffa84c 0%,#ff7b0d 100%); */
+  /* background: linear-gradient(-90deg,blue,green,orange); */
+  /* background: linear-gradient(to bottom, #d4e4ef 0%,#86aecc 100%); */
+  /* background: linear-gradient(to bottom, #fefcea 0%,#f1da36 100%); */
+}
+.nav-item{
+  color: white;
+}
