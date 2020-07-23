@@ -1,0 +1,40 @@
+form{
+  margin-left: 200px;
+  margin-top: 100px;
+  border: 2px solid black;
+  text-align: center;
+  width: 60%;
+  border-radius: 6%;
+  color: white;
+  text-shadow: 1px 1px #fe4902;
+}
+h1{
+  text-decoration: underline;
+}
+.table{
+  width: 60%;
+  margin-left: 150px;
+  text-align: left;
+  color: orange;
+}
+input{
+  width: 90%;
+  border: 2px solid grey;
+  height: 6vh;
+}
+.modify{
+  position: relative;
+  bottom: 42px;
+  float: right;
+  font-size: 15px;
+}
+.icon:hover{
+  color: white;
+  cursor: pointer;
+}
+.submit{
+  margin-left: 30%;
+}
+.content{
+  color: orange;
+}

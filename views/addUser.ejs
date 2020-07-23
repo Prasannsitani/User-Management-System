@@ -1,0 +1,40 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="css/addUser.css">
+<div class="abc">
+  <form action="/addUser" method="post">
+    <h1>Fill User Details Correctly</h1>
+    <br><br>
+    <div class="table">
+      Name <br>
+      <input type="text" value="<%= addName %>" readonly><br>
+      Email <br>
+      <input type="email" value="<%= addEmail %>" readonly><br>
+      Phone No. <br>
+      <input type="tel" name="phone" placeholder="0123456XXX" pattern="[0-9]{10}" ><br>
+      Address <br>
+      <input type="text" name="address" placeholder="House Number and Street Name"><br>
+      Date Of Birth(DOB)[format: mm/dd/yyyy] <br>
+      <input type="date" name="dob"> <br>
+      College/School <br>
+      <input type="text" name="college" placeholder="Forest Hills Example High School"><br>
+    </div>
+    <a href="#" onclick="addModal()" class="btn btn-warning text-light" type="button" name="button">Submit</a>
+    <div class="modal-bg">
+      <div class="modal-content">
+          <a href="/addUser" class="close">
+            +
+          </a>
+          <div class="content">
+            Congrats!!,Your details got saved in our database,Press continue to proceed:-
+          </div>
+            <div class="outer">
+              <div class="inner">
+                  <button class="btn btn-success btn-lg text-light" type="submit">Continue -></button>
+              </div>
+            </div>
+      </div>
+    </div>
+    <a class="btn btn-success" href="/">Home</a><br><br>
+  </form>
+</div>
+<%- include('partials/footer') %>

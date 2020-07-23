@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Register Page</title>
+    
     <!-- Bootstrap CDN and jquery links -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -14,6 +15,8 @@
 
     <!-- My Css -->
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="icon" href="css/favicon_io/favicon.ico">
 
     <!-- My JS -->
     <script src="passwordChecker.js" charset="utf-8"></script>
@@ -22,14 +25,18 @@
   <body>
     <div class="register">
       <form action="/register" method="post">
+        <a href="/" class="close">
+          +
+        </a>
         <div class="heading">
           Register
         </div><br>
-          Name<input type="text" name="name" placeholder="Name"><br><br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email<input type="email" name="email" placeholder="example@123.com" size="200"><br><br>
-          Password &nbsp; <input type="password" name="password" placeholder="Password"><br><br>
-          Confirm Password &nbsp; <input type="password" name="cpassword" placeholder="Password"><br><br>
-          <button class="btn btn-outline-light" type="submit" name="button">Submit</button>
+          Name<input type="text" name="name" placeholder="Name" required><br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email<input type="email" name="email" placeholder="example@123.com" size="200" required><br><br>
+          Password &nbsp; <input type="password" name="password" placeholder="Password" required><br><br>
+          Confirm Password &nbsp; <input type="password" name="cpassword" placeholder="Password" required><br><br>
+          <button class="btn btn-outline-light" type="submit" name="button">Submit</button><br>
+          <a class="hvr-underline-from-center already" href="/login">Already have an account??</a>
       </form>
     </div>
   </body>

@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="css/addUser.css">
+  <form class="abc">
+    <h1>Details Block</h1>
+    <br><br>
+    <div class="table">
+      Name <br>
+      <input type="text" value="<%= addName %>" readonly><br>
+      Email <br>
+      <input type="email" value="<%= addEmail %>" readonly><br>
+      Phone No. <br>
+      <input type="tel" value="<%= addPhone %>" readonly><br>
+      Address <br>
+      <input type="text" value="<%= addAddress %>" readonly><br>
+      Date Of Birth(DOB)[format: mm/dd/yyyy] <br>
+      <input type="date" value="<%= addDob %>" readonly><br>
+      College/School <br>
+      <input type="text" value="<%= addCollege %>" readonly><br>
+    </div>
+    <a class="btn btn-success" href="/">Home</a><br><br>
+  </form>
+<%- include('partials/footer') %>

@@ -15,19 +15,18 @@
 
     <!-- My CSS -->
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/login3.css">
     <link rel="stylesheet" href="css/hover.css">
 
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
 
-    <!-- Favicon Link -->
+    <!-- Favicon Icon Link -->
     <link rel="icon" href="css/favicon_io/favicon.ico">
+    
   </head>
   <body>
     <div class="login">
-      <a href="/" class="close">
-        +
-      </a>
       <form action="/login" method="post">
         <div class="heading">
           Login
@@ -36,7 +35,7 @@
         Password &nbsp; <input type="password" name="password" placeholder="Password" required><br><br>
         <button class="btn btn-outline-light btn-login" type="submit" name="button">Login</button>
       </form>
-          <a class="forgot" href="#" onclick="forgot()">Forgot Password?</a><br><br>
+        <a class="forgot" href="#" onclick="forgot()">Forgot Password?</a><br><br>
         <a class="hvr-underline-from-center create" href="/register">Create a new account&nbsp; <i class="fas fa-chevron-circle-right"></i></a>
     </div>
     <div class="modal-bg">
@@ -45,13 +44,15 @@
             +
           </a>
           <div class="content">
-            Change Password Page <br><hr>
+            Choose a new password
           </div>
-          <form action="/forgotEmail" method="post">
-            <label class="label">Email:</label>
-            <input type="text" name="forgotEmail" placeholder="example@123.com"><br><hr>
+          <form action="/changePassword" method="post">
+            <hr>
+            Create a new password that is at least 6 characters long. <br><br>
+            <label>New Password:</label>
+            <input type="text" name="Password"><br><hr>
               <div class="inner">
-                  <button class="searchButton btn-sm" type="submit">Search</button>
+                  <button class="searchButton btn-sm" type="submit">Change</button>
               </div>
               <div class="inner">
                   <a href="/login" class="searchButton btn-sm">Cancel</a>

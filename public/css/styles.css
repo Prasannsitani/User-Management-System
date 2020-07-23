@@ -1,31 +1,241 @@
-.{
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
 body{
-  height: 92.5vh;
-  background-color: white;
-  background: linear-gradient(to bottom,skyblue,white);
-  overflow: hidden;
-  /* background: linear-gradient(to bottom,pink,red); */
-  /* background: linear-gradient(to top, #141E30 0%,#243B55 100%); */
+  /* height: auto; */
+  background: radial-gradient(grey,black);
+  overflow: auto;
+  margin: 0;
+  padding: 0;
 }
 .container{
-  margin-top: 200px;
-  margin-left: 80px;
+  margin-top: 100px;
+  margin-left: 100px;
 }
-.card{
-  color: white;
-  background: linear-gradient(to top, #141E30 0%,#243B55 100%);
-}
+
+/* Navbar decoration*/
 .navbar{
-  /* background: linear-gradient(to bottom,skyblue,white); */
-  /* background: linear-gradient(to bottom, #ffa84c 0%,#ff7b0d 100%); */
-  /* background: linear-gradient(-90deg,blue,green,orange); */
-  /* background: linear-gradient(to bottom, #d4e4ef 0%,#86aecc 100%); */
-  /* background: linear-gradient(to bottom, #fefcea 0%,#f1da36 100%); */
+  /* box-shadow: 10px 10px 10px 5px #86aecc; */
+  box-shadow: 10px 10px 10px 5px white;
 }
-.nav-item{
+.header{
+  margin-left: 20%;
+}
+.header h1{
+  font-weight: bold;
+  /* margin-left: -35%; */
+  margin-left: 40px;
+  margin-right: 410px;
+  font-family: 'Raleway', sans-serif;
+  text-shadow: 1px 1px 0 black,2px 2px 0 black;
+  text-decoration: underline;
+}
+.header p{
+  color: white;
+  font-size: 20px;
+  margin-right: 310px;
+  margin-left: -70px;
+  border-radius: 10px;
+  padding: 20px 0;
+  text-shadow: 1px 1px #fe4902,2px 2px #fe4902;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+@media screen and (max-width: 1280px){
+  .header h1{
+    width: 60%;
+    margin-left: -5%;
+  }
+}
+@media screen and (max-width: 992px){
+  .header h1{
+    margin-left: -20%;
+    margin-right: 200px;
+    width: 120%;
+  }
+  .header p{
+    width: 100%;
+    margin-left: -30%;
+  }
+}
+@media screen and (max-width: 600px){
+  .header h1{
+    margin-left: -35%;
+    margin-right: 200px;
+    width: 120%;
+  }
+  .header p{
+    margin-right: 20%;
+    margin-left: -35%;
+  }
+}
+/* Overall Card */
+.card{
+  height: 35vh;
+  width: 80%;
+  font-size: 20px;
+  padding-top: 13%;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Card decoration */
+.card1{
+  background: linear-gradient(to bottom,pink,white);
+  margin-left: 23%;
+  margin-bottom: 3%;
+}
+.card2{
+  background: linear-gradient(to bottom,lightgreen,white);
+}
+.card3{
+  background: linear-gradient(to bottom,skyblue,white);
+  margin-left: 23%;
+}
+.card4{
+  background: linear-gradient(to bottom,grey,white);
+}
+
+/* Hover line decoration */
+.card1.hvr-underline-from-center:before{
+  background: purple;
+}
+.card2.hvr-underline-from-center:before{
+  background: green;
+}
+.card3.hvr-underline-from-center:before{
+  background: #243B55;
+}
+.card4.hvr-underline-from-center:before{
+  background: black;
+  opacity: 0.5;
+}
+
+/* Card text decoration */
+.card-text{
+  height: 200px;
+  margin-top: 70px;
+}
+a.card-text1{
+  color: purple;
+  text-decoration: none;
+}
+a.card-text2{
+  color: green;
+  text-decoration: none;
+}
+a.card-text3{
+  color: #243B55;
+  text-decoration: none;
+}
+a.card-text4{
+  color: black;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+/* Footer */
+#footer{
+  text-align: center;
+  margin: 20px;
   color: white;
 }
+.alogin{
+  display: none;
+}
+#footer i{
+  color: skyblue;
+  padding: 4px;
+}
+
+/* Pop Up CSS */
+.modal-bg{
+  width: 100%;
+  height: 135%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content{
+  width: 500px;
+  height: 220px;
+  background-color: white;
+  margin-bottom: 200px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 3%;
+  border: 5px solid orange;
+}
+.outer{
+  width: 100%;
+  text-align: center;
+}
+.inner{
+  margin: 5%;
+  display: inline-block;
+}
+.content{
+  font-family: cursive;
+  font-size: 20px;
+  color: orange;
+}
+.close{
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+/* Drop Down */
+.drop-content ul{
+  color: white;
+  float: right;
+  margin-top: 6%;
+  list-style-type: none;
+  display: none;
+}
+.drop-content ul li a{
+  padding-right: 20px;
+  color: orange;
+}
+.drop{
+  margin-top: 6%;
+  float: right;
+  color: white;
+  border: 2px solid white;
+}
+.drop:hover{
+  color: black;
+}
+/* About CSS */
+.about{
+  font-weight: bold;
+  margin-top: 50px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  text-shadow: 1px 1px 0 black,2px 2px 0 black;
+  text-decoration: underline;
+}
+.aboutContent{
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 20px 0;
+  text-shadow: 1px 1px #fe4902,2px 2px #fe4902;
+  font-family: 'Raleway', sans-serif;
+}
+
+                    /* Backgrouds Gradients */
+/* background: linear-gradient(to bottom,skyblue,white); */
+/* background: linear-gradient(to bottom, #ffa84c 0%,#ff7b0d 100%); */
+/* background: linear-gradient(-90deg,blue,green,orange); */
+/* background: linear-gradient(to bottom, #fefcea 0%,#f1da36 100%); */
+/* background: linear-gradient(to bottom, #d4e4ef 0%,#86aecc 100%); */
+/* background: linear-gradient(to bottom,pink,red); */
+/* background: linear-gradient(to top, #141E30 0%,#243B55 100%); */

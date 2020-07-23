@@ -1,0 +1,47 @@
+<%- include('partials/header.ejs') %>
+<link rel="stylesheet" href="css/addUser.css">
+  <form class="abc" action="/modify" method="post">
+    <h1>Modify the Details below</h1>
+    <br><br>
+    <div class="table">
+      Name <br>
+      <input class="addName" type="text" name="name" value="<%= addName %>" readonly><br>
+      <a class="modify" onclick="nameModify()"><i class="icon fas fa-pen-square fa-3x"></i></a>
+      Email
+      <input class="addEmail" type="email" name="email" value="<%= addEmail %>" readonly><br>
+      <a class="modify" onclick="emailModify()"><i class="icon fas fa-pen-square fa-3x"></i></a>
+      Phone
+      <input class="addPhone" type="tel" name="phone" pattern="[0-9]{10}" value="<%= addPhone %>" readonly><br>
+      <a class="modify" onclick="phoneModify()"><i class="icon fas fa-pen-square fa-3x"></i></a>
+      Address
+      <input class="addAddress" type="text" name="address" value="<%= addAddress %>" readonly><br>
+      <a class="modify" onclick="addressModify()"><i class="icon fas fa-pen-square fa-3x"></i></a>
+      Date Of Birth(DOB)[format: mm/dd/yyyy]
+      <input class="addDob" type="text" name="dob" value="<%= addDob %>" readonly><br>
+      <a class="modify" onclick="dobModify()"><i class="icon fas fa-pen-square fa-3x"></i></a>
+      College
+      <input class="addCollege" type="text" name="college" value="<%= addCollege %>" readonly><br>
+      <a class="modify" onclick="collegeModify()"><i class="icon fas fa-pen-square fa-3x"></i></a>
+    </div>
+      <a href="#" onclick="submit()" class="submit btn btn-info text-light" type="button">Submit</a>
+      <a class="btn btn-success" href="/">Home</a><br><br>
+  <div class="modal-bg">
+    <div class="modal-content">
+        <a href="/modify" class="close">
+          +
+        </a>
+        <div class="content">
+          Are you sure you want to update the account??
+        </div>
+          <div class="outer">
+            <div class="inner">
+                <button class="btn btn-outline-primary btn-lg" type="submit">Yes</button>
+            </div>
+            <div class="inner">
+                <a href="/modify" class="btn btn-outline-primary btn-lg" type="button">No</a>
+            </div>
+          </div>
+    </div>
+  </div>
+  </form>
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,101 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="css/change.css">
+    <a onmouseover="dropdown()" onmouseout="dropdown2()" class="hvr-sweep-to-right nav-item nav-link drop" href="#"><i class="fas fa-user"></i></a>
+      <div onmouseover="dropdown()" onmouseout="dropdown2()" class="drop-content">
+        <ul>
+          <li><a href="#" onclick="reset()">Reset Password</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </div>
+<div class="container">
+  <div class="header">
+    <h1>Place for Saving Data</h1>
+    <p>
+      This platform is to just save and protect your valuable data in our system and provide
+      the best security system to protect your data from our side.
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <div class="card card1 hvr-underline-from-center ">
+      <div class="card-body">
+        <a onclick="complete()" href="/addUser" class="card-text card-text1" name="complete">
+          COMPLETE YOUR PROFILE
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card card2 hvr-underline-from-center">
+      <div class="card-body">
+          <a href="/modify" class="card-text card-text2">
+            MODIFY USER DETAILS
+          </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card card3 hvr-underline-from-center">
+      <div class="card-body">
+        <a href="#" class="card-text card-text3">
+          DELETE USER
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card card4 hvr-underline-from-center">
+      <div class="card-body">
+        <a href="/display" class="card-text card-text4">
+          DISPLAY USER DETAILS
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="modal-bg">
+    <div class="modal-content">
+        <div onclick="close()" class="close">
+          +
+        </div>
+        <div class="content">
+          Are you sure you want to delete the account?
+        </div>
+        <form action="/button" method="post">
+          <div class="outer">
+            <div class="inner">
+                <input onclick="changeYes()" class="yesButton btn btn-outline-primary btn-lg" name="yes" type="submit" value="Yes">
+            </div>
+            <div class="inner">
+                <button onclick="changeNo()"class="noButton btn btn-outline-primary btn-lg" name="no" type="submit" value="No">No</button>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
+  <div class="modal-bg-1">
+    <div class="modal-content-1">
+        <a href="/home2" class="close">
+          +
+        </a>
+        <div class="content">
+          Change Password Page <br><hr>
+        </div>
+        <form class="changeContent" action="/resetPassword" method="post">
+          <label>Old Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input class="pass" type="password" name="oldPass" placeholder="old@password.com"><br>
+          <label>New Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input class="pass" type="password" name="newPass" placeholder="new@password.com"><br>
+          <label>Confirm Password:</label>
+          <input class="pass" type="password" name="cNewPass" placeholder="confirm@password.com"><br>
+            <div class="inner">
+                <button class="searchButton btn-sm" type="submit">Change</button>
+            </div>
+            <div class="inner">
+                <a href="/home2" class="searchButton btn-sm">Cancel</a>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') %>

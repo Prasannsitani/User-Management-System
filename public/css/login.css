@@ -19,7 +19,7 @@ body{
   position: relative;
   top: 25%;
   margin-left: 35%;
-  height: 50vh;
+  height: 57vh;
   width: 60vh;
 }
 .register{
@@ -73,4 +73,101 @@ input[type=password]{
   margin-right: 4%;
   height: 30px;
   width: 180px;
+}
+.nAU{
+  color: black;
+  font-family: cursive;
+}
+.col-4{
+  font-size: 15px;
+}
+.btn-login{
+  width: 40%;
+  margin-left: 5%;
+}
+a.forgot{
+  font-size: 13px;
+  font-family: cursive;
+  margin-left: 5%;
+  color: black;
+  text-decoration: none;
+}
+a.forgot:hover{
+  color: white;
+}
+a.create{
+  margin-left: 5%;
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+}
+a.create:hover{
+  color: white;
+}
+a.hvr-underline-from-center:before{
+  background: white;
+  opacity: 0.5;
+}
+a.already{
+  font-size: 17px;
+  color: black;
+  text-decoration: none;
+}
+a.already:hover{
+  color: white;
+}
+/* Pop Up CSS */
+.modal-bg{
+  width: 100%;
+  height: 135%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content{
+  width: 500px;
+  height: 235px;
+  background-color: white;
+  margin-bottom: 200px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 3%;
+  border: 5px solid skyblue;
+}
+.label{
+  color: skyblue;
+}
+.inner{
+  display: inline-block;
+}
+.searchButton{
+  color: skyblue;
+  text-decoration: none;
+  border: 1px solid skyblue;
+  background-color: white;
+  display: inline-block;
+}
+.searchButton:hover{
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: skyblue;
+}
+.content{
+  font-family: serif;
+  font-size: 30px;
+  color: skyblue;
+}
+.close{
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor: pointer;
 }

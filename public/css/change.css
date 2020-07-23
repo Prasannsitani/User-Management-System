@@ -1,0 +1,41 @@
+.content{
+  color: red;
+}
+.changeContent{
+  color: red;
+}
+.modal-content-1{
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  margin-bottom: 200px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 3%;
+  border: 5px solid red;
+  position: relative;
+}
+.modal-bg-1{
+  width: 100%;
+  height: 135%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.searchButton{
+  color: white;
+  background-color: red;
+  border: 1px solid red;
+}
+.searchButton:hover{
+  color: red;
+  background-color: white;
+}
+.pass{
+  border: 1px solid red;
+}

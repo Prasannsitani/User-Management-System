@@ -1,70 +1,68 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <title>User Management System</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-
-<body>
-  <div class="container">
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="#">UMS</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="#">Home</a>
-          <a class="nav-item nav-link" href="#">Contact</a>
-          <a class="nav-item nav-link" href="#">About</a>
-          <a class="nav-item nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </div>
-      </div>
-    </nav> -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-2">
-        </div>
-        <div class="col-lg-4">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Login Section</h5>
-              <p class="card-text">This is the login section where you can login yourself as a member of our community</p>
-              <center>
-                <a href="/login" class="btn btn-outline-warning">Login</a>
-              </center>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Sign Up Section</h5>
-              <p class="card-text">This is the Register Section where you can register yourself as a member of our community.</p>
-              <center>
-                <a href="/register" class="btn btn-outline-warning">Register</a>
-              </center>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="col-sm-4">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div> -->
+<%- include('partials/header') %>
+<div class="container">
+  <div class="header">
+    <h1>Place for Saving Data</h1>
+    <p>
+      This platform is to just save and protect your valuable data in our system and provide
+      the best security system to protect your data from our side.
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <div class="card card1 hvr-underline-from-center">
+      <div class="card-body">
+        <a href="/register" class="card-text card-text1">
+          ADD A NEW USER
+        </a>
       </div>
     </div>
   </div>
-</body>
-
-</html>
+  <div class="col-6">
+    <div class="card card2 hvr-underline-from-center">
+      <div class="card-body">
+        <a onclick="withoutLogin()" href="#" class="card-text card-text2">
+          MODIFY USER DETAILS
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card card3 hvr-underline-from-center">
+      <div class="card-body">
+        <a onclick="withoutLogin()" href="#" class="card-text card-text3">
+          DELETE USER
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card card4 hvr-underline-from-center">
+      <div class="card-body">
+        <a onclick="withoutLogin()" href="#" class="card-text card-text4">
+          DISPLAY USER DETAILS
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="modal-bg">
+    <div class="modal-content">
+        <a href="/" class="close">
+          +
+        </a>
+        <div class="content">
+          Maybe you haven't Created/logined in our system??<br>
+          Login/Register below:->
+        </div>
+          <div class="outer">
+            <div class="inner">
+              <a href="/login" class="btn btn-outline-primary btn-lg">Login</a>
+            </div>
+            <div class="inner">
+              <a href="/register" class="btn btn-outline-primary btn-lg">Register</a>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') %>
